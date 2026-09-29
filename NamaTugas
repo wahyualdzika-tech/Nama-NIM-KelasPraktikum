@@ -1,0 +1,27 @@
+public class ZakatMal{
+    public static void main(String[] args) {
+        int penghasilan = 120000000; 
+        int pengeluaran = 84000000; 
+        int nisab = 91681728; 
+        
+        int sulprus = penghasilan - pengeluaran; 
+        String kategori;
+        double zakat;
+        //
+        
+        if (sulprus >= nisab) {
+            kategori = "MUZAKKI (Wajib Zakat)   ";
+            zakat = sulprus * 0.025;
+        } else {
+            kategori = "MUSTAHIK (Miskin)";
+            zakat = 0;
+        }
+        
+        System.out.println("Total Penghasilan   : "+ penghasilan);
+        System.out.println("Total Pengeluaran   : "+ pengeluaran);
+        System.out.println("Sulprus             : "+ sulprus);
+        System.out.println("Nisab               : "+ nisab);
+        System.out.println("Kategori            : "+ kategori);
+        System.out.println("Zakat               : "+ (int) zakat);
+    }
+}
